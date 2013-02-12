@@ -11,5 +11,7 @@ package dip.lab2.student.solution1;
 public class ProgramStart {
     public static void main(String[] args) {
         
+         CalculatorType foodTip = 
+                new FoodServiceTipCalculator();
     }
 }
