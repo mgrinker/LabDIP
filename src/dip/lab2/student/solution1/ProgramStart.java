@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package dip.lab2.student.solution1;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -11,10 +12,18 @@ package dip.lab2.student.solution1;
 public class ProgramStart {
     public static void main(String[] args) {
         
-         CalculatorType foodTip = 
+        // Create decimal format object
+        DecimalFormat dollar = new DecimalFormat("#,##0.00");
+        
+        // Get a food service tip 
+        CalculatorType foodTip = 
                 new FoodServiceTipCalculator
                  (FoodServiceTipCalculator.ServiceQuality.GOOD, 25.25);
-         TipCalculator newTip = new TipCalculator(tip);
+         TipCalculator newTip = new TipCalculator(foodTip);
+         newTip.getTip();
+         System.out.println("Your food service tip is $"
+                 + dollar.format(foodTip.getTip()));
+         
          
     }
 }
