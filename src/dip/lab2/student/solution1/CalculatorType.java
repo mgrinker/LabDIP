@@ -15,13 +15,6 @@ public interface CalculatorType {
 
     public abstract double getTip();
     
-    enum ServiceQuality {
-        GOOD,
-        FAIR,
-        POOR        
-    }
-    
-    public abstract ServiceQuality getServiceQuaity();
-
+   
     
 }
