@@ -13,15 +13,15 @@ public interface CalculatorType {
     static final double FAIR_RATE = 0.15;
     static final double POOR_RATE = 0.10;
 
-    double getTip();
-
-    public void setServiceRating();
-
-    public static class ServiceQuality {
+    public abstract double getTip();
     
+    enum ServiceQuality {
+        GOOD,
+        FAIR,
+        POOR        
     }
-    public ServiceQuality getServiceQuality();
     
-    public void setServiceRating(ServiceQuality q);
+    public abstract ServiceQuality getServiceQuaity();
+
     
 }
